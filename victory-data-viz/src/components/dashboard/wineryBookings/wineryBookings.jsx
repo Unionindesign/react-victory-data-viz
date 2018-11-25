@@ -14,16 +14,16 @@ import {
 
 //data
 
-const dataWineBookings = [
-  { x: 1, y: 1 },
-  { x: 2, y: 1 },
-  { x: 3, y: 1 },
-  { x: 4, y: 1 },
-  { x: 5, y: 1 },
-  { x: 6, y: 1 },
-  { x: 7, y: 1 },
-  { x: 8, y: 1 }
-];
+// const dataWineBookings = [
+//   { x: 1, y: 1 },
+//   { x: 2, y: 1 },
+//   { x: 3, y: 1 },
+//   { x: 4, y: 1 },
+//   { x: 5, y: 1 },
+//   { x: 6, y: 1 },
+//   { x: 7, y: 1 },
+//   { x: 8, y: 1 }
+// ];
 
 class WineryBookings extends Component {
   render() {
@@ -36,11 +36,12 @@ class WineryBookings extends Component {
               domainPadding={{ y: 100 }}
               animate={{ duration: 3000 }}
               theme={VictoryTheme.material}
+              height={300}
             >
               <VictoryLegend
                 x={70}
                 y={5}
-                title="Bookings"
+                // title="Bookings"
                 centerTitle
                 orientation="horizontal"
                 gutter={20}
@@ -55,7 +56,7 @@ class WineryBookings extends Component {
                 size={5}
                 data={this.state.data}
                 style={{
-                  data: { opacity: d => d.opacity || 1, fill: "#c43a31" }
+                  data: { opacity: d => d.opacity || 1, fill: "#tomato" }
                 }}
                 animate={{
                   onExit: {

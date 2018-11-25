@@ -27,6 +27,7 @@ import {
 
 //components
 import WineryBookings from "./wineryBookings/wineryBookings";
+import Marketing from "./marketing/marketing";
 
 //images
 import Cheers from "../../images/cheers.png";
@@ -46,8 +47,8 @@ const dataMonthly = [
   { month: 4, earnings: 3000 },
   { month: 5, earnings: 2500 },
   { month: 6, earnings: 1800 },
-  { month: 7, earnings: 22000 },
-  { month: 8, earnings: 27000 },
+  { month: 7, earnings: 2200 },
+  { month: 8, earnings: 2700 },
   { month: 9, earnings: 1900 },
   { month: 10, earnings: 3300 },
   { month: 11, earnings: 5400 },
@@ -55,9 +56,9 @@ const dataMonthly = [
 ];
 
 const dataPieChart = [
-  { x: 1, y: 3.5, label: "Winery" },
-  { x: 2, y: 4, label: "Lodge" },
-  { x: 3, y: 2.5, label: "Hot Springs" }
+  { x: 1, y: 3.8, label: "Winery 38%" },
+  { x: 2, y: 1.8, label: "Lodge 18%" },
+  { x: 3, y: 4.4, label: "Hot Springs 44%" }
 ];
 
 class Dashboard extends Component {
@@ -144,44 +145,26 @@ class Dashboard extends Component {
                 </div>
                 <Tabs className="tabStyle">
                   <Tab active title="Bookings">
-                    <div className="activityCard">
-                      {/* <h5>
-                        <Icon>insert_invitation</Icon>
-                        Monthly Bookings 2018 End of Year report
-                      </h5> */}
-                      <WineryBookings />
-
-                      {/* <VictoryChart domainPadding={50}>
-                        <VictoryScatter
-                          size={3}
-                          style={{ data: { fill: "cyan" } }}
-                          data={dataBookings}
-                          groupComponent={<VictoryClipContainer />}
-                        />
-
-                        <VictoryAxis
-                          tickValues={[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]}
-                          tickFormat={[
-                            "Jan",
-                            "Feb",
-                            "Mar",
-                            "Apr",
-                            "May",
-                            "Jun",
-                            "Jul",
-                            "Aug",
-                            "Sep",
-                            "Oct",
-                            "Nov",
-                            "Dec"
-                          ]}
-                          gridComponent={<VictoryBrushLine width={15} />}
-                        />
-                      </VictoryChart> */}
-                    </div>
+                    <Col s={12}>
+                      <div className="activityCard">
+                        <h5>
+                          <Icon className="iconVert">insert_invitation</Icon>
+                          Monthly Booking Projections
+                        </h5>
+                        <WineryBookings />
+                      </div>
+                    </Col>
                   </Tab>
                   <Tab title="Marketing">
-                    <p>tab content</p>
+                    <Col s={12} l={12}>
+                      <div className="activityCardGreen">
+                        <h5>
+                          <Icon className="iconVert">insert_chart</Icon>
+                          Marketing Analysis
+                        </h5>
+                        <Marketing />
+                      </div>
+                    </Col>
                   </Tab>
                   <Tab title="Reporting">
                     <Col s={12} l={6}>
@@ -190,7 +173,7 @@ class Dashboard extends Component {
                           <Icon className="iconVert" small>
                             pie_chart
                           </Icon>
-                          Marketshare Analysis
+                          Booking Analysis
                         </h5>
                         <VictoryPie
                           colorScale={["tomato", "orange", "cyan"]}
@@ -205,7 +188,7 @@ class Dashboard extends Component {
                       </div>
                     </Col>
                     <Col s={12} l={6}>
-                      <div className="activityCard">
+                      <div className="activityCardGreen">
                         <h5>
                           <Icon className="iconVert" small>
                             monetization_on

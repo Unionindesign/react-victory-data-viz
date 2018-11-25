@@ -12,13 +12,13 @@ class Header extends Component {
       <div className="header">
         <Row>
           <Col s={12}>
-            <h4 className="logoFont">
+            <h2 className="logoFont">
               <Icon medium className="iconVert">
                 language
               </Icon>
               Travel Tr@cker Portal
               {/* <span> CuddleStone Winery & Hot Springs</span> */}
-            </h4>
+            </h2>
           </Col>
         </Row>
       </div>

@@ -40,10 +40,20 @@
 .activityCard {
   border: 1px solid #afafaf;
   border-radius: 8px;
-  /* -webkit-box-shadow: 2px 2px 12px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 2px 2px 12px 0px rgba(50, 50, 50, 0.75);
-  box-shadow: 2px 2px 12px 0px rgba(50, 50, 50, 0.75); */
+  -webkit-box-shadow: 0.75px 0.75px 0.5px 0.5px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0.75px 0.75px 0.5px 0.5px rgba(50, 50, 50, 0.75);
+  box-shadow: 0.75px 0.75px 0.5px 0.5px rgba(50, 50, 50, 0.75);
   background-color: #e5f1fb;
+  margin: 5%;
+}
+
+.activityCardGreen {
+  border: 1px solid #afafaf;
+  border-radius: 8px;
+  -webkit-box-shadow: 0.75px 0.75px 0.5px 0.5px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0.75px 0.75px 0.5px 0.5px rgba(50, 50, 50, 0.75);
+  box-shadow: 0.75px 0.75px 0.5px 0.5px rgba(50, 50, 50, 0.75);
+  background-color: #e2f6e2;
   margin: 5%;
 }
 .activityCardImg {
